@@ -4,6 +4,12 @@
 # jmastats <img src="man/figures/logo.png" align="right" width="120px" />
 
 <!-- badges: start -->
+
+[![CRAN
+status](https://www.r-pkg.org/badges/version/jmastats)](https://CRAN.R-project.org/package=jmastats)
+[![CRANlogs
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/jmastats)](https://cran.r-project.org/package=jmastats)
+[![DOI](https://zenodo.org/badge/515892382.svg)](https://zenodo.org/badge/latestdoi/515892382)
 <!-- badges: end -->
 
 jmastats
@@ -157,7 +163,7 @@ read_tide_level(system.file("dummy/tide.txt", package = "jmastats"))
 
 ### 震度データベース
 
-[震度データベース検索](https://www.data.jma.go.jp/svd/eqdb/data/shindo/index.html)よりダウンロードしたcscvファイルを読み込む関数として`read_eqdb_csv()`があります。ダミーデータを読み込む例を示します。
+[震度データベース検索](https://www.data.jma.go.jp/svd/eqdb/data/shindo/index.html)よりダウンロードしたcsvファイルを読み込む関数として`read_eqdb_csv()`があります。ダミーデータを読み込む例を示します。
 
 ``` r
 read_eqdb_csv(system.file("dummy/eqdb.csv", package = "jmastats"))
@@ -178,7 +184,10 @@ read_eqdb_csv(system.file("dummy/eqdb.csv", package = "jmastats"))
 
 ### データセット
 
-**気象観測地点**
+#### 気象観測地点
+
+気象データを取得するための`block_no`はここからも調べることができます。
+観測地点の配置された標高や観測種目のほか、観測地点の位置情報が含まれます。
 
 ``` r
 data("stations", package = "jmastats")
@@ -194,13 +203,40 @@ data("stations", package = "jmastats")
 | 雨   | 有線ロボット気象計 | 降水量                                                                                     |
 | 雪   | 有線ロボット積雪計 | 積雪量                                                                                     |
 
+#### 潮位観測地点
+
+潮位観測を行う地点についてのデータです。
+stn変数の情報をもとにして、`read_tide_level()`での潮位観測記録の取得が行えます。
+
+``` r
+data("tide_station", package = "jmastats")
+```
+
+#### 震度観測点
+
+地震・津波を観測するためのポイントを記録したデータです。震度観測点は気象庁のほかに各地方公共団体や国立研究開発法人防災科学技術研究所の観測地点が設置されていますが、このデータには気象庁が管理する地点だけが含まれます。
+
+``` r
+data("earthquake_station", package = "jmastats")
+```
+
 ## 引用
 
 このパッケージを利用した学術論文の出版、学会発表等を行う際は次のように引用を行ってください。
 
-> Uryu S (2023). *jmastats: Download Weather Data from Japan
-> Meteorological Agency Website*. R package version 0.2.0,
-> <https://github.com/uribo/jmastats>.
+    Uryu S (2023). _jmastats: Download Weather Data from Japan Meteorological
+    Agency Website_. R package version 0.2.0,
+    <https://CRAN.R-project.org/package=jmastats>.
+
+または
+
+    @Manual{,
+      title = {jmastats: Download Weather Data from Japan Meteorological Agency Website},
+      author = {Shinya Uryu},
+      year = {2023},
+      note = {R package version 0.2.0},
+      url = {https://CRAN.R-project.org/package=jmastats},
+    }
 
 ## 関連するパッケージ
 
