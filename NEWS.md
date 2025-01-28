@@ -1,3 +1,13 @@
+# jmastats 0.3.0
+
+## New features
+
+* Retrieve climatological normals based on past data using `jma_collect()` (#20).
+
+## Datasets
+
+* Various datasets handled by the package have been updated to the latest version in January 2025.
+
 # jmastats 0.2.2
 
 ## Datasets

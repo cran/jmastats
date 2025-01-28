@@ -1,5 +1,5 @@
 Package: jmastats
-Version: 0.2.2
+Version: 0.3.0
 Title: Download Weather Data from Japan Meteorological Agency Website
 Description: Provides features that allow users to download 
   weather data published by the Japan Meteorological Agency (JMA) website 
@@ -30,8 +30,8 @@ LazyData: true
 ByteCompile: true
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2024-08-01 04:19:25 UTC; suryu
+Packaged: 2025-01-28 04:37:22 UTC; suryu
 Author: Shinya Uryu [aut, cph, cre] (<https://orcid.org/0000-0002-0493-6186>)
 Maintainer: Shinya Uryu <suika1127@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-08-01 04:30:01 UTC
+Date/Publication: 2025-01-28 05:00:02 UTC
