@@ -1,10 +1,8 @@
 context("test-data.R")
 
 test_that("check stations statement", {
-  expect_is(stations,
-            c("sf", "tbl_df", "tbl", "data.frame"))
-  expect_equal(dim(stations),
-               c(1323L, 14L))
+  expect_is(stations, c("sf", "tbl_df", "tbl", "data.frame"))
+  expect_equal(dim(stations), c(1323L, 14L))
   expect_named(
     stations,
     c(
@@ -50,13 +48,13 @@ test_that("check stations statement", {
 test_that("tidal station", {
   expect_equal(
     dim(tide_station),
-    c(2019, 7)
+    c(2089, 7)
   )
 })
 
 test_that("earthquake station", {
   expect_equal(
     dim(earthquake_station),
-    c(671, 7)
+    c(670, 7)
   )
 })
